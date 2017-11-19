@@ -1,0 +1,95 @@
+<!DOCTYPE html><html><head><title>iLearn</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="/css/style.css"><link href="css/fullcalendar.min.css" rel="stylesheet"></head><body><nav class="navbar navbar-default navbar-fixed-top"><div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display--><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><!-- Collect the nav links, forms, and other content for toggling--><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav navbar-right"><li><a class="nav-link" href="#"><i class="fa fa-fw fa-user"></i>Ahmet Işın</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle mr-lg-2"><i class="fa fa-fw fa-bell"></i>Bildirimler</a></li><li class="nav-item"><a class="nav-link" href="login.html"><i class="fa fa-fw fa-sign-out"></i>Çıkış</a></li></ul></div></div></nav><div class="left"><div class="item"><a href="index.html"><span class="glyphicon glyphicon-th-large"></span>    Anasayfa</a></div><div class="item active"><a href="ogrenci.html"><span class="glyphicon glyphicon-th-list"></span>    Öğrenci İşlemleri</a></div><div class="item"><a href="ders.html"><span class="glyphicon glyphicon-log-out"></span>    Ders Programı</a></div><div class="item"><a href="aktivite.html"><span class="glyphicon glyphicon-log-out"></span>    Aktiviteler</a></div><div class="item"><a href="#"><span class="glyphicon glyphicon-star"></span>    Başarılar</a></div><div class="item"><a href="sss.html"><span class="glyphicon glyphicon-random"></span>    S.S.S</a></div><div class="item"><a href="iletisim.html"><span class="glyphicon glyphicon-phone"></span>    İletişim</a></div></div><section id="main"><div class="container"><div class="page-header"><h1>SSS <small>Sıkça Sorulan Sorular</small></h1></div><div class="row profile"><div class="col-md-12"><div class="profile-content"><div class="alert alert-warning alert-dismissible" role="alert"><button class="close" type="button" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Kapat</span></button>        Sıkça Sorulan Soruları burada bulabilirsiniz. Eğer aradığınızı bulamadıysanız <strong><a href="iletisim.html">İletişim</a></strong>'den bize ulaşabilirsiniz.</div><div class="panel-group" id="accordion"><div class="faqHeader">Genel Sorular</div><div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Nasıl Hesap Oluşturabilirim?</a></h4></div><div class="panel-collapse collapse in" id="collapseOne"><div class="panel-body">Hesap oluşturmak için bizimle iletişime geçebilirsiniz.</div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">Sistemde Varolan Bir Hatayı Nasıl Giderebilirim?</a></h4></div><div class="panel-collapse collapse" id="collapseTen"><div class="panel-body">bizimle iletişime geçebilirsiniz.</div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">Genel Sorular Kısmında Aradığımı Bulamadım?</a></h4></div><div class="panel-collapse collapse" id="collapseEleven"><div class="panel-body">Sağlık olsun endişelenme, sana en kısa sürede yardımcı olmaya çalışacağız.</div></div></div></div></div></div></div></div></section><script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script type="text/javascript" src="/js/script.js"></script><script src="js/moment.min.js"></script><script src="js/fullcalendar.min.js"></script><script>$(document).ready(function() {
+    $('#sidebarCollapse').on('click', function() {
+        $('#sidebar').toggleClass('active');
+    });
+});
+$(document).ready(function() {
+    $('#characterLeft').text('300 karakter kaldı');
+    $('#message').keydown(function() {
+        var max = 300;
+        var len = $(this).val().length;
+        if (len >= max) {
+            $('#characterLeft').text('Limite ulaştınız');
+            $('#characterLeft').addClass('red');
+            $('#btnSubmit').addClass('disabled');
+        } else {
+            var ch = max - len;
+            $('#characterLeft').text(ch + ' karakter kaldı');
+            $('#btnSubmit').removeClass('disabled');
+            $('#characterLeft').removeClass('red');
+        }
+    });
+});
+
+$(document).ready(function() {
+        
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay,listWeek'
+            },
+            defaultDate: '2017-11-12',
+            navLinks: true, // can click day/week names to navigate views
+            editable: true,
+            eventLimit: true, // allow "more" link when too many events
+            events: [
+                {
+                    title: 'All Day Event',
+                    start: '2017-11-01',
+                },
+                {
+                    title: 'Long Event',
+                    start: '2017-11-07',
+                    end: '2017-11-10'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2017-11-09T16:00:00'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2017-11-16T16:00:00'
+                },
+                {
+                    title: 'Conference',
+                    start: '2017-11-11',
+                    end: '2017-11-13'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2017-11-12T10:30:00',
+                    end: '2017-11-12T12:30:00'
+                },
+                {
+                    title: 'Lunch',
+                    start: '2017-11-12T12:00:00'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2017-11-12T14:30:00'
+                },
+                {
+                    title: 'Happy Hour',
+                    start: '2017-11-12T17:30:00'
+                },
+                {
+                    title: 'Dinner',
+                    start: '2017-11-12T20:00:00'
+                },
+                {
+                    title: 'Birthday Party',
+                    start: '2017-11-13T07:00:00'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'http://google.com/',
+                    start: '2017-11-28'
+                }
+            ]
+        });
+        
+    });
+    </script></body></html>
