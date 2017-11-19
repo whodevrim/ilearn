@@ -1,13 +1,6 @@
-## Pug-Sass Starter project.
+## Pug-Sass 
 
-[![Build Status][travis-image]][travis-url]
-
-This is a Pug and Sass starter project using gulp for task automation.
-
-### Note
-If you still need Jade support use [this](https://github.com/azemoh/gulp-jade-sass-starter) project instead.
-
-This project uses...
+Gerekli npm paketlerinin kurulu olduğundan emin olun.
 
 1. [browser-sync](https://github.com/browsersync/browser-sync) to launch a local server and do live reloads as sass and pug files changes
 2. [gulp-pug](https://github.com/jamen/gulp-pug) to compile pug files.
@@ -15,9 +8,6 @@ This project uses...
 4. [gulp-sass](https://github.com/dlmanning/gulp-sass) to compile sass files.
 5. [gulp-autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer) to add vendor prefixes to css files
 
-### To run
-- Execute `npm install` from this directory to install dev dependencies.
-- Execute `gulp` to run all tasks, launch the browser sync local server and watch for changes.
-
-[travis-url]: https://travis-ci.org/azemoh/gulp-pug-sass-seed
-[travis-image]: https://travis-ci.org/azemoh/gulp-pug-sass-seed.svg
+### Çalıştırmak için;
+- Paketleri yükledikten sonra`npm install` komutunu kullanın.
+- Gulp'ı çalıştırmak için proje dizininde `gulp` komutunu kullanın.
