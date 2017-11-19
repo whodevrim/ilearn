@@ -1,0 +1,40 @@
+section#main
+  .container
+    .page-header
+        h1
+          | SSS 
+          small Sıkça Sorulan Sorular
+    .row.profile
+      .col-md-12
+        .profile-content
+          .alert.alert-warning.alert-dismissible(role='alert')
+            button.close(type='button', data-dismiss='alert')
+              span(aria-hidden='true') ×
+              span.sr-only Kapat
+            |         Sıkça Sorulan Soruları burada bulabilirsiniz. Eğer aradığınızı bulamadıysanız 
+            strong
+              a(href='iletisim.html') İletişim
+            | 'den bize ulaşabilirsiniz.
+          #accordion.panel-group
+            .faqHeader Genel Sorular
+            .panel.panel-default
+              .panel-heading
+                h4.panel-title
+                  a.accordion-toggle(data-toggle='collapse', data-parent='#accordion', href='#collapseOne') Nasıl Hesap Oluşturabilirim?
+              #collapseOne.panel-collapse.collapse.in
+                .panel-body
+                  | Hesap oluşturmak için bizimle iletişime geçebilirsiniz.
+            .panel.panel-default
+              .panel-heading
+                h4.panel-title
+                  a.accordion-toggle.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseTen') Sistemde Varolan Bir Hatayı Nasıl Giderebilirim?
+              #collapseTen.panel-collapse.collapse
+                .panel-body
+                  | bizimle iletişime geçebilirsiniz.
+            .panel.panel-default
+              .panel-heading
+                h4.panel-title
+                  a.accordion-toggle.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseEleven') Genel Sorular Kısmında Aradığımı Bulamadım?
+              #collapseEleven.panel-collapse.collapse
+                .panel-body
+                  | Sağlık olsun endişelenme, sana en kısa sürede yardımcı olmaya çalışacağız.

@@ -1,0 +1,64 @@
+section#main
+  .container
+    .page-header
+        h1
+          | Profil 
+          small Hesap Bilgileri
+    .row.profile
+      .col-md-3
+        .profile-sidebar
+          // SIDEBAR USERPIC
+          .profile-userpic
+            img.img-responsive(src='http://lorempixel.com/200/200', alt='')
+          // END SIDEBAR USERPIC
+          // SIDEBAR USER TITLE
+          .profile-usertitle
+            .profile-usertitle-name
+              | Ahmet Işın
+            .profile-usertitle-job
+              | Öğrenci
+          // END SIDEBAR USER TITLE
+          // SIDEBAR BUTTONS
+          .profile-userbuttons
+            button.btn.btn-success.btn-outline-rounded.green(type='button') Takip
+            button.btn.btn-danger.btn-outline-rounded(type='button') Mesaj
+          // END SIDEBAR BUTTONS
+          // SIDEBAR MENU
+          .profile-usermenu
+            ul.nav
+              li.active
+                a(href='#')
+                  i.glyphicon.glyphicon-home
+                  |               Görüntüle
+              li
+                a(href='#')
+                  i.glyphicon.glyphicon-user
+                  |               Hesap Ayarları
+              li
+                a(href='#')
+                  i.glyphicon.glyphicon-star
+                  |               Başarılar
+              li
+                a(href='#')
+                  i.glyphicon.glyphicon-flag
+                  |               Yardım
+          // END MENU
+      .col-md-9
+        .profile-content
+          .alert.alert-warning(role='alert') Yaptığınız değişiklikler onaylandıktan sonra aktif olacaktır.
+          .panel.panel-default
+            .panel-body
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex libero, dolorum consectetur exercitationem ipsum vel, minima totam, nihil explicabo eligendi id natus dolor reiciendis culpa alias error. Expedita, facilis labore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ex tempore facere corporis dolores at cupiditate, obcaecati, molestiae veniam architecto asperiores fugiat ipsam voluptate perferendis, rem sequi. Sint repellendus, veritatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis quo veritatis repellendus molestias molestiae dolore in eligendi unde, temporibus iure ad obcaecati magni natus mollitia facere suscipit nisi aut reiciendis?
+
+          .progress
+            .progress-bar.progress-bar-success.progress-bar-striped(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%')
+              span.sr-only 40% Complete (success)
+          .progress
+            .progress-bar.progress-bar-info.progress-bar-striped(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
+              span.sr-only 20% Complete
+          .progress
+            .progress-bar.progress-bar-warning.progress-bar-striped(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
+              span.sr-only 60% Complete (warning)
+          .progress
+            .progress-bar.progress-bar-danger.progress-bar-striped(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+              span.sr-only 80% Complete (danger)

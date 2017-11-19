@@ -1,0 +1,24 @@
+section#main
+  .container
+    .page-header
+        h1
+          | İletişim 
+          small İletişim formu
+    .row.profile
+      .col-md-12
+        .profile-content
+          .form-area
+            form(role='form')
+              .form-group
+                input#name.form-control(type='text', name='name', placeholder='Ad & Soyad', required='')
+              .form-group
+                input#email.form-control(type='text', name='email', placeholder='E-Posta', required='')
+              .form-group
+                input#mobile.form-control(type='text', name='mobile', placeholder='Telefon Numaranız', required='')
+              .form-group
+                input#subject.form-control(type='text', name='subject', placeholder='Konu', required='')
+              .form-group
+                textarea#message.form-control(type='textarea', placeholder='Mesajınız', maxlength='300', rows='7')
+                span.help-block
+                  p#characterLeft.help-block Limite ulaştınız.
+              button#submit.btn.btn-success.btn-block.btn-outline-rounded.green(type='button', name='submit') Gönder

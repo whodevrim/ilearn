@@ -1,0 +1,75 @@
+section#main
+	.container
+		.board
+			.board-inner
+				ul#myTab.nav.nav-tabs
+					.liner
+					li.active
+						a(href='#home', data-toggle='tab', title='iLearn')
+							span.round-tabs.one
+								i.glyphicon.glyphicon-home
+					li
+						a(href='#profile', data-toggle='tab', title='Dersleyin')
+							span.round-tabs.two
+								i.glyphicon.glyphicon-user
+					li
+						a(href='#messages', data-toggle='tab', title='Aktivite Oluşturun')
+							span.round-tabs.three
+								i.glyphicon.glyphicon-gift
+					li
+						a(href='#settings', data-toggle='tab', title='Başarılar')
+							span.round-tabs.four
+								i.glyphicon.glyphicon-star
+					li
+						a(href='#doner', data-toggle='tab', title='completed')
+							span.round-tabs.five
+								i.glyphicon.glyphicon-ok
+			.tab-content
+				#home.tab-pane.fade.in.active
+					h3.head.text-center
+						| iLearn
+						sup ™
+						span(style='color:#f48260;') ♥ 
+						| Eğitim Portalı
+					p.narrow.text-center
+						| iLearn eğitim portalında sizin için hazırlanmış derslere ve eğitim programlarına ulaşabilirsiniz.
+					p.text-center
+						a.btn.btn-success.btn-outline-rounded.green(href='')
+							| şimdi iLearn'leyin!
+							span.glyphicon.glyphicon-send(style='margin-left:10px;')
+				#profile.tab-pane.fade
+					h3.head.text-center
+						| iLearn
+						sup ™
+						|  Ders Programı
+					p.narrow.text-center
+						| Ders programı oluşturup düzenli bir şekilde çalışmaya başlayabilirsiniz.
+					p.text-center
+						a.btn.btn-success.btn-outline-rounded.green(href='')
+							| ders programı oluştur
+							span.glyphicon.glyphicon-send(style='margin-left:10px;')
+				#messages.tab-pane.fade
+					h3.head.text-center Aktivite
+					p.narrow.text-center
+						| iLearn aktivite programı ile güncel aktivitelerinizi derleyebilirsiniz.
+					p.text-center
+						a.btn.btn-success.btn-outline-rounded.green(href='')
+							| aktivite oluşturun
+							span.glyphicon.glyphicon-send(style='margin-left:10px;')
+				#settings.tab-pane.fade
+					h3.head.text-center Başarılarınızı Görün!
+					p.narrow.text-center
+						| iLearn ile daha fazla başarıya ulaşın!
+					p.text-center
+						a.btn.btn-success.btn-outline-rounded.green(href='')
+							| başarılar
+							span.glyphicon.glyphicon-send(style='margin-left:10px;')
+				#doner.tab-pane.fade
+					.text-center
+						i.img-intro.icon-checkmark-circle
+					h3.head.text-center iLearn'ü
+						span(style='color:#f48260;') ♥
+						|  şimdi satın alın!
+					p.narrow.text-center
+							| iLearn'ü şimdi satın alıp öğrencilere özel indirimlerden faydalanabilirsiniz.
+				.clearfix
